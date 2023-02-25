@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "viz-paraphernalia"
+version = "0.1.0"
+description = ""
+authors = ["Yusei Miura"]
+readme = "README.md"
+packages = [{include = "viz_paraphernalia"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.19.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
