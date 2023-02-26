@@ -14,7 +14,7 @@ def init_session() -> SessionManager:
 
 def init_pages(ssm: SessionManager) -> list[BaseTemplate]:
     pages = [
-        HomePage(page_id=PageId.HOME, title="データ可視化用ツール", ssm=ssm),
+        HomePage(page_id=PageId.HOME, title="アプリケーション概要", ssm=ssm),
         PreparePage(page_id=PageId.PREPARE, title="データ準備", ssm=ssm)
     ]
     return pages
