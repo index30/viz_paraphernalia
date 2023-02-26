@@ -8,3 +8,4 @@ class SessionKey(Enum):
 
 class PageId(Enum):
     HOME = auto()
+    PREPARE = auto()

@@ -3,6 +3,7 @@ from config.const import PageId
 from config.session import SessionManager
 from templates.base_template import BaseTemplate
 from templates.public.home import HomePage
+from templates.public.prepare import PreparePage
 from apps.route import Route
 
 
@@ -13,7 +14,8 @@ def init_session() -> SessionManager:
 
 def init_pages(ssm: SessionManager) -> list[BaseTemplate]:
     pages = [
-        HomePage(page_id=PageId.HOME, title="Home", ssm=ssm)
+        HomePage(page_id=PageId.HOME, title="データ可視化用ツール", ssm=ssm),
+        PreparePage(page_id=PageId.PREPARE, title="データ準備", ssm=ssm)
     ]
     return pages
 
