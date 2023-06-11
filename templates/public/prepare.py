@@ -57,6 +57,8 @@ class PreparePage(BaseTemplate):
         self.check_data_type(validation_data, validation_col)
         self.check_data_type(test_data, test_col)
 
+        # TODO: session_stateに、読み込ませたデータの情報をもたせる
+
 
     def _detail_on_clink(self) -> None:
         pass
