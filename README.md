@@ -11,7 +11,7 @@
 
 ## 実行
 ```
-$ poetry run streamlit run main.py
+$ poetry run streamlit run home.py
 ```
 
 ## 環境準備

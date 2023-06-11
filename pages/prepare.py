@@ -1,12 +1,9 @@
 import streamlit as st
-from config.const import PageId, UtilConst
-from config.session import SessionManager
-from templates.base_template import BaseTemplate
+from config.const import UtilConst
 
 
-class PreparePage(BaseTemplate):
-    def __init__(self, page_id: PageId, title: str, ssm: SessionManager):
-        super().__init__(page_id, title, ssm)
+class PreparePage():
+    def __init__(self):
         self._data_type = None
 
     def set_data_type(self, data_type):
@@ -20,7 +17,7 @@ class PreparePage(BaseTemplate):
 
     def render(self) -> None:
         # タイトルの表示
-        st.title(self.title)
+        st.title("データ準備")
 
         # データ準備
         # データ種類の選択
@@ -62,3 +59,5 @@ class PreparePage(BaseTemplate):
 
     def _detail_on_clink(self) -> None:
         pass
+
+PreparePage().render()

@@ -10,7 +10,3 @@ class UtilConst(Enum):
         "テーブル": ['csv', 'xlsx', 'xls'],
         "画像": ['jpg', 'png']
     }
-
-class PageId(Enum):
-    HOME = auto()
-    PREPARE = auto()

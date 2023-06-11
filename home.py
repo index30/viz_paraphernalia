@@ -1,12 +1,9 @@
 import streamlit as st
-from config.const import PageId
-from templates.base_template import BaseTemplate
 
-
-class HomePage(BaseTemplate):
+class HomePage():
     def render(self) -> None:
         # タイトルの表示
-        st.title(self.title)
+        st.title("ホーム")
 
         # Homeは説明中心
         st.write(
@@ -44,3 +41,6 @@ class HomePage(BaseTemplate):
 
     def _detail_on_clink(self) -> None:
         pass
+
+if __name__ == '__main__':
+    HomePage().render()
