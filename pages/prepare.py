@@ -1,4 +1,6 @@
+from sklearn import datasets
 import streamlit as st
+
 from config.const import UtilConst
 
 
@@ -32,21 +34,24 @@ class PreparePage():
         train_col, validation_col, test_col = st.columns([2, 2, 2])
 
         if prepare_choice == "プリセット":
-            pass
+            dataset = datasets.load_iris()
+            X, y = dataset.data, dataset.target
+            st.write(X)
         else:
+            ext_list = UtilConst().EXT_DICT
             train_data = train_col.file_uploader(
                 f"Upload: 学習用 {self._data_type}データ", 
-                type=UtilConst.EXT_DICT[self._data_type], 
+                type=ext_list[self._data_type], 
                 accept_multiple_files=True
             )
             validation_data = validation_col.file_uploader(
                 f"Upload: 検証用 {self._data_type}データ", 
-                type=UtilConst.EXT_DICT[self._data_type], 
+                type=ext_list[self._data_type], 
                 accept_multiple_files=True
             )
             test_data = test_col.file_uploader(
                 f"Upload: テスト用 {self._data_type}データ", 
-                type=UtilConst.EXT_DICT[self._data_type], 
+                type=ext_list[self._data_type], 
                 accept_multiple_files=True
             )
         
